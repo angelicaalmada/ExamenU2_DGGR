@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:viewmodel="clr-namespace:ExamenU2_DGGR.ViewModel" x:DataType="viewmodel:VMcalorias"
+             x:Class="ExamenU2_DGGR.Vista.Vcalorias">
+
+    <StackLayout>
+        <Frame>
+            <Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"/>
+        </Frame>
+
+        <Label Text="Duracion de la Actividad"/>
+        <Entry Placeholder="Duracion en Min" Keyboard="Numeric" Text="{Binding Duracion}"/>
+
+        <Label Text="Peso corporal"/>
+        <Entry Placeholder="Peso en Kg" Keyboard="Numeric" Text="{Binding Peso}"/>
+
+        <Label Text="Calculo de calorias"/>
+        <Entry Text="{Binding Calorias}"/>
+
+        <Button Text="Calcular" Command="{Binding BtnCalcularcomand}"/>
+
+
+        <Entry Text="{Binding Mensaje}" TextColor="Red"/>
+        <Image Source="https://i.ibb.co/ZmxW8jG/correr.webp" x:Name="Mostrarcorrer" IsVisible="{Binding Mostrarcorrer}"/>
+        <Image Source="https://i.ibb.co/3mLN4fj/correr2.jpg" x:Name="Mostrarcorrer2" IsVisible="{Binding Mostrarcorrer2}" />
+        <Image Source="https://i.ibb.co/J56LK3L/Felicidades.png" x:Name="Mostrarfelicidades" IsVisible="{Binding Mostrarfelicidades}" />
+        
+
+    </StackLayout>
+</ContentPage>
